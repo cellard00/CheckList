@@ -1,3 +1,4 @@
+
 function onEdit(e) {
   if(e != undefined) {
     if(e.value === 'complete' && e.oldValue === "incomplete"){
@@ -9,6 +10,10 @@ function onEdit(e) {
           end = CountRows(row,col)
           var rowSpec = sheet.getRange(s);
           sheet.moveRows(rowSpec, end+1);
+          var sNew = "A" + end +":A" + end 
+
+          var newSpec = sheet.getRange(sNew)
+          sheet.hideRow(newSpec)
     } 
   }
 };
