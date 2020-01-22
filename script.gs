@@ -1,6 +1,6 @@
 function onEdit(e) {
   if(e != undefined) {
-    if(e.value === 'complete' && e.oldValue === "incomplete"){
+    if(e.value === 'complete'){
           var r = e.range
           var col = r.getColumn()
           var row = r.getRow()
